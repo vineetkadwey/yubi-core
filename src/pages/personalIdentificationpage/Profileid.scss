@@ -1,0 +1,81 @@
+.bg-profile {
+  background-color: #1C2038;
+  height: 140px;
+  
+}
+.badge {
+  text-align: center;
+  justify-content: center;
+}
+.media {
+  margin: 10px;
+  position: relative;
+}
+.media img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  
+  text-align: center;
+  
+}
+
+.Camera {
+  
+  position: absolute;
+ 
+  bottom: 10px;
+  right: 66px;
+
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #ffffff;
+  text-align: center;
+  padding: 0;
+}
+
+.roboto{
+  font-family: "Roboto";
+}
+
+
+.MuiIconButton-root {
+  /* flex: 0 0 auto; */
+  /* color: rgba(0, 0, 0, 0.54); */
+  padding: 8px !important;
+  /* overflow: visible; */
+  /* font-size: 1.5rem; */
+  /* text-align: center; */
+  /* transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+  /* border-radius: 50%; */
+}
+
+.MuiTabs-flexContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+// PersonalIdentification
+.center{
+  text-align: center;
+}
+
+.form{
+  padding:30px 80px ;
+}
+.linkInput input{
+  padding: 5px;
+  border-radius: 0;
+}
+.cardForm{
+  // padding: 0 20px 0 20px;
+}
+
+
+
+.css-ueukts-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+  color: rgb(255 255 255)!important;
+  background-color: rgb(14 187 215)!important;
+}
