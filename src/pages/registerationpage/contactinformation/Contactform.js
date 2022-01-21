@@ -6,6 +6,7 @@ import PhoneInput from "react-phone-input-2";
 import { BiCheck, BiUserCheck } from 'react-icons/bi';
 import "react-phone-input-2/lib/style.css";
 
+
 const phoneRegExp = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
 const signInSchema = Yup.object().shape({
   phoneNumber: Yup.string().matches(phoneRegExp, 'Phone number is not valid').required("Phone is required"),
@@ -26,6 +27,11 @@ const initialValues = {
 
 export const Contactform = (props) => {
   const onContinueButton = (values) => {
+ 
+
+
+   
+
     console.log(values);
     props.handleNext();
     console.log("contact in");

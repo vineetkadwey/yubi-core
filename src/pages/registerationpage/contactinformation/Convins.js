@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Grid, Checkbox, Link, Button, Typography, Box } from "@mui/material";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-input-2";
+import axios from "axios";
 
 // import "./user.scss";
 import "./contactform.scss";
@@ -30,6 +31,23 @@ const initialValues = {
 
 export const Convins = (props) => {
   const onContinueButton = (values) => {
+
+
+    axios
+    .post("http://localhost:5000/api/auth/register", {
+     values
+    })
+    .then((response) => {
+      console.log("response", response);
+      localStorage.setItem(
+        "login",
+        JSON.stringify({
+          userLogin: true,
+          token: response.data.access_token,
+        })
+      );
+     
+    })
     console.log(values);
     props.handleNext();
    console.log("vineetra");

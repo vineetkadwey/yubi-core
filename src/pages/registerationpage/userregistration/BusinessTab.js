@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Grid, Button, Box } from "@mui/material";
 import * as Yup from "yup";
 import "./user.scss";
+import axios from "axios";
 
 const signInSchema = Yup.object().shape({
   firstname: Yup.string().required("First Name is required"),
@@ -18,6 +19,24 @@ const initialValues = {
 
 export const BusinessTab = (props) => {
   const onContinueButton = (values) => {
+    axios
+      .post("http://localhost:5000/api/auth/register", {
+       values
+      })
+      .then((response) => {
+        console.log("response", response);
+        localStorage.setItem(
+          "login",
+          JSON.stringify({
+            userLogin: true,
+            token: response.data.access_token,
+          })
+        );
+       
+      })
+
+
+
     console.log(values);
     props.handleNext();
     console.log("submit");
